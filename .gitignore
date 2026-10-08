@@ -1,0 +1,22 @@
+# ============================================================
+#  VANDYXX — Archivos que NO se suben a GitHub / Netlify
+# ============================================================
+
+# PRIVADO — capturas de las cuentas del dúo (no deben ser públicas)
+Web DJ - referencias (no subir)/
+
+# Documentos internos — NO deben quedar públicos en la web.
+# Se quedan solo en tu computadora. Si quieres versionarlos,
+# usa un repo privado aparte.
+vandyxx_marketing_plan.html
+GUIA-AUTOGESTION.md
+GUIA-AUTOGESTION.docx
+
+# Configuración de Claude Code
+.claude/
+
+# Basura del sistema / OneDrive
+desktop.ini
+Thumbs.db
+.DS_Store
+*.tmp

@@ -1,0 +1,46 @@
+{
+  "featuredVideo": "",
+  "images": {
+    "hero": "assets/images/hero.jpg",
+    "feature": "assets/images/duo-1.jpg",
+    "noelia": "",
+    "essie": ""
+  },
+  "stats": {
+    "followers": "3", "followersSuffix": "M+",
+    "shows": "100",
+    "cities": "20"
+  },
+  "members": {
+    "noelia": {
+      "bio_es": "Una artista magnética con una comunidad de millones en redes, Noelia trae sets open-format de alta energía cargados de sabor latino, urbano y house — la clase de fiesta que no para una vez que entra el beat.",
+      "bio_en": "A magnetic performer with a community of millions across social platforms, Noelia brings high-energy open-format sets packed with Latin, urban and house flavors — the kind of party that doesn't stop once the beat drops."
+    },
+    "essie": {
+      "bio_es": "De Los Ángeles a Madrid, Essie es DJ open-format y residente en clubes como Opium, Kapital, Ramses y Kube. Nominada a Mejor DJ de España 20/21, ha compartido escenario con Pitbull, Wizkid, Nervo y Jazzy Jeff, y tocó en el Orgullo de Madrid ante más de 30,000 personas.",
+      "bio_en": "From Los Angeles to Madrid, Essie is an open-format DJ and resident at clubs like Opium, Kapital, Ramses and Kube. Nominated Best DJ Spain 20/21, she has shared the stage with Pitbull, Wizkid, Nervo and Jazzy Jeff, and played Madrid Pride before 30,000+ people."
+    }
+  },
+  "instagram": {
+    "enabled": false,
+    "beholdId": ""
+  },
+  "tour": {
+    "useBandsintown": false,
+    "bandsintownAppId": "",
+    "bandsintownArtist": "VANDYXX",
+    "dates": [
+      { "day": "12", "month": "JUL", "venue": "Sunset Beach Club", "city": "San Salvador, SV", "status": "tickets", "url": "#" },
+      { "day": "26", "month": "JUL", "venue": "Warehouse 33", "city": "Miami, USA", "status": "tickets", "url": "#" },
+      { "day": "09", "month": "AUG", "venue": "Electric Garden Festival", "city": "Mexico City, MX", "status": "soldout", "url": "#" },
+      { "day": "23", "month": "AUG", "venue": "Rooftop Sessions", "city": "Bogotá, CO", "status": "tickets", "url": "#" }
+    ]
+  },
+  "socials": {
+    "instagram": "https://www.instagram.com/thevandyxx/",
+    "youtube": "https://www.youtube.com/@TheVandyxx",
+    "tiktok": "https://www.tiktok.com/@the.vandyxx",
+    "soundcloud": "https://soundcloud.com/the-vandyxx",
+    "mixcloud": "https://www.mixcloud.com/thevandyxx/"
+  }
+}

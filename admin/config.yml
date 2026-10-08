@@ -1,0 +1,112 @@
+# ============================================================
+#  VANDYXX — Configuración del panel de contenido (CMS)
+#  Compatible con Sveltia CMS y Decap CMS.
+#  Cambia SOLO la línea "repo:" por tu usuario/repositorio de GitHub.
+# ============================================================
+
+backend:
+  name: github
+  repo: TU-USUARIO/vandyxx-web   # <-- CAMBIA esto por tu-usuario/tu-repo
+  branch: main
+
+# Dónde se guardan las fotos que suban desde el panel
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+# Idioma del panel
+locale: "es"
+
+collections:
+  - name: "contenido"
+    label: "Contenido de la web"
+    delete: false
+    files:
+      - name: "principal"
+        label: "Contenido principal"
+        file: "content.json"
+        description: "Edita textos, fotos, fechas y redes. Al guardar, la web se actualiza sola."
+        fields:
+          # ----- Video destacado -----
+          - label: "Video destacado (link de YouTube)"
+            name: "featuredVideo"
+            widget: "string"
+            required: false
+            hint: "Pega el link de un reel/Short de YouTube. Déjalo vacío para no mostrar video."
+
+          # ----- Imágenes principales -----
+          - label: "Imágenes principales"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Foto de portada (Hero)", name: "hero", widget: "image", required: false }
+              - { label: "Foto sección Nosotras", name: "feature", widget: "image", required: false }
+              - { label: "Foto de Noelia (opcional)", name: "noelia", widget: "image", required: false }
+              - { label: "Foto de Essie (opcional)", name: "essie", widget: "image", required: false }
+
+          # ----- Estadísticas -----
+          - label: "Estadísticas (contadores)"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Seguidores (número)", name: "followers", widget: "string" }
+              - { label: "Seguidores (sufijo)", name: "followersSuffix", widget: "string", hint: "Ej: M+, K+" }
+              - { label: "Shows", name: "shows", widget: "string" }
+              - { label: "Ciudades", name: "cities", widget: "string" }
+
+          # ----- Bios -----
+          - label: "Integrantes — Noelia"
+            name: "members"
+            widget: "object"
+            fields:
+              - label: "Noelia"
+                name: "noelia"
+                widget: "object"
+                fields:
+                  - { label: "Bio (Español)", name: "bio_es", widget: "text" }
+                  - { label: "Bio (English)", name: "bio_en", widget: "text" }
+              - label: "Essie"
+                name: "essie"
+                widget: "object"
+                fields:
+                  - { label: "Bio (Español)", name: "bio_es", widget: "text" }
+                  - { label: "Bio (English)", name: "bio_en", widget: "text" }
+
+          # ----- Instagram auto-feed -----
+          - label: "Galería desde Instagram (auto-feed)"
+            name: "instagram"
+            widget: "object"
+            fields:
+              - { label: "Activar feed de Instagram", name: "enabled", widget: "boolean", default: false }
+              - { label: "ID de Behold", name: "beholdId", widget: "string", required: false, hint: "Pega el Feed ID de behold.so (ver guía)." }
+
+          # ----- Gira -----
+          - label: "Fechas de gira"
+            name: "tour"
+            widget: "object"
+            fields:
+              - { label: "Usar Bandsintown (auto)", name: "useBandsintown", widget: "boolean", default: false, hint: "Si lo activas, las fechas vienen de Bandsintown y se ignora la lista de abajo." }
+              - { label: "Bandsintown App ID", name: "bandsintownAppId", widget: "string", required: false }
+              - { label: "Nombre de artista en Bandsintown", name: "bandsintownArtist", widget: "string", required: false }
+              - label: "Fechas (manuales)"
+                name: "dates"
+                widget: "list"
+                label_singular: "Fecha"
+                summary: "{{fields.day}} {{fields.month}} — {{fields.venue}} ({{fields.city}})"
+                fields:
+                  - { label: "Día", name: "day", widget: "string" }
+                  - { label: "Mes", name: "month", widget: "string", hint: "Ej: JUL, AUG, SEP" }
+                  - { label: "Lugar / Venue", name: "venue", widget: "string" }
+                  - { label: "Ciudad", name: "city", widget: "string" }
+                  - { label: "Estado", name: "status", widget: "select", options: ["tickets", "soldout"], default: "tickets" }
+                  - { label: "Link de entradas", name: "url", widget: "string", required: false, default: "#" }
+
+          # ----- Redes sociales -----
+          - label: "Redes sociales (links)"
+            name: "socials"
+            widget: "object"
+            fields:
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "YouTube", name: "youtube", widget: "string" }
+              - { label: "TikTok", name: "tiktok", widget: "string" }
+              - { label: "SoundCloud", name: "soundcloud", widget: "string" }
+              - { label: "Mixcloud", name: "mixcloud", widget: "string" }
