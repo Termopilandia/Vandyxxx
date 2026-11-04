@@ -70,6 +70,9 @@ img{max-width:100%;display:block}
   transition:opacity .6s var(--ease), visibility .6s;
 }
 .preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}
+/* Respaldo solo con CSS: si el JavaScript falla, el preloader se oculta igual a los 3 s */
+.preloader{animation:preloaderFallback 0s linear 3s forwards}
+@keyframes preloaderFallback{to{opacity:0;visibility:hidden;pointer-events:none}}
 .preloader__logo{
   font-family:var(--display);font-size:clamp(2.5rem,8vw,5rem);letter-spacing:2px;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -489,6 +492,7 @@ img{max-width:100%;display:block}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
+  .preloader{display:none}
   .reveal{opacity:1;transform:none}
 }
   </style>
