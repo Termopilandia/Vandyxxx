@@ -6,6 +6,14 @@
     "noelia": "",
     "essie": ""
   },
+  "gallery": [
+    { "image": "assets/images/duo-1.jpg" },
+    { "image": "assets/images/duo-2.jpg" },
+    { "image": "assets/images/duo-1.jpg" },
+    { "image": "assets/images/duo-2.jpg" },
+    { "image": "assets/images/duo-2.jpg" },
+    { "image": "assets/images/duo-1.jpg" }
+  ],
   "stats": {
     "followers": "3", "followersSuffix": "M+",
     "shows": "100",
@@ -13,13 +21,96 @@
   },
   "members": {
     "noelia": {
+      "name": "Noelia Moya",
+      "initials": "NM",
       "bio_es": "Una artista magnética con una comunidad de millones en redes, Noelia trae sets open-format de alta energía cargados de sabor latino, urbano y house — la clase de fiesta que no para una vez que entra el beat.",
-      "bio_en": "A magnetic performer with a community of millions across social platforms, Noelia brings high-energy open-format sets packed with Latin, urban and house flavors — the kind of party that doesn't stop once the beat drops."
+      "bio_en": "A magnetic performer with a community of millions across social platforms, Noelia brings high-energy open-format sets packed with Latin, urban and house flavors — the kind of party that doesn't stop once the beat drops.",
+      "instagram": "https://www.instagram.com/noeliamoyass/",
+      "soundcloud": "https://soundcloud.com/noelia-moya-791503805",
+      "tiktok": "https://www.tiktok.com/@noeliamoyas"
     },
     "essie": {
+      "name": "Essie de Vall",
+      "initials": "EV",
       "bio_es": "De Los Ángeles a Madrid, Essie es DJ open-format y residente en clubes como Opium, Kapital, Ramses y Kube. Nominada a Mejor DJ de España 20/21, ha compartido escenario con Pitbull, Wizkid, Nervo y Jazzy Jeff, y tocó en el Orgullo de Madrid ante más de 30,000 personas.",
-      "bio_en": "From Los Angeles to Madrid, Essie is an open-format DJ and resident at clubs like Opium, Kapital, Ramses and Kube. Nominated Best DJ Spain 20/21, she has shared the stage with Pitbull, Wizkid, Nervo and Jazzy Jeff, and played Madrid Pride before 30,000+ people."
+      "bio_en": "From Los Angeles to Madrid, Essie is an open-format DJ and resident at clubs like Opium, Kapital, Ramses and Kube. Nominated Best DJ Spain 20/21, she has shared the stage with Pitbull, Wizkid, Nervo and Jazzy Jeff, and played Madrid Pride before 30,000+ people.",
+      "instagram": "https://www.instagram.com/essiedevall/",
+      "soundcloud": "https://soundcloud.com/essie-de-vall",
+      "mixcloud": "https://www.mixcloud.com/essie-de-vall/",
+      "website": "https://www.essiedevall.com/"
     }
+  },
+  "releases": [
+    {
+      "type": "EP",
+      "name": "NEON PULSE",
+      "date": "2026",
+      "art": "assets/images/release-1.jpg",
+      "links": [
+        { "label": "Spotify", "url": "#" },
+        { "label": "Apple", "url": "#" },
+        { "label": "Beatport", "url": "#" }
+      ]
+    },
+    {
+      "type": "SINGLE",
+      "name": "MIDNIGHT FREQ",
+      "date": "2025",
+      "art": "assets/images/release-2.jpg",
+      "links": [
+        { "label": "Spotify", "url": "#" },
+        { "label": "Apple", "url": "#" },
+        { "label": "Beatport", "url": "#" }
+      ]
+    },
+    {
+      "type": "REMIX",
+      "name": "AFTERGLOW",
+      "date": "2025",
+      "art": "assets/images/release-3.jpg",
+      "links": [
+        { "label": "Spotify", "url": "#" },
+        { "label": "Apple", "url": "#" },
+        { "label": "YouTube", "url": "#" }
+      ]
+    }
+  ],
+  "reels": [
+    {
+      "platform": "YouTube",
+      "title": "Crazy Mashups",
+      "views": "2.1K",
+      "url": "https://www.youtube.com/@TheVandyxx/shorts",
+      "image": "assets/images/duo-2.jpg"
+    },
+    {
+      "platform": "Instagram",
+      "title": "Studio Vibes",
+      "views": "107K",
+      "url": "https://www.instagram.com/thevandyxx/reels/",
+      "image": "assets/images/duo-1.jpg"
+    },
+    {
+      "platform": "TikTok",
+      "title": "Señorita… ¿Hola?",
+      "views": "28K",
+      "url": "https://www.tiktok.com/@the.vandyxx",
+      "image": "assets/images/duo-2.jpg"
+    },
+    {
+      "platform": "YouTube",
+      "title": "Live Session",
+      "views": "19K",
+      "url": "https://www.youtube.com/@TheVandyxx",
+      "image": "assets/images/duo-1.jpg"
+    }
+  ],
+  "contacts": {
+    "email": "thevandyxx@gmail.com",
+    "based": "Madrid, Spain · Worldwide",
+    "basedUrl": "#",
+    "management": "MVP Cluster El Salvador",
+    "managementUrl": "#"
   },
   "instagram": {
     "enabled": false,
@@ -42,5 +133,106 @@
     "tiktok": "https://www.tiktok.com/@the.vandyxx",
     "soundcloud": "https://soundcloud.com/the-vandyxx",
     "mixcloud": "https://www.mixcloud.com/thevandyxx/"
+  },
+  "texts": {
+    "site": {
+      "title": { "es": "VANDYXX — Sitio oficial", "en": "VANDYXX — Official Site" }
+    },
+    "meta": {
+      "desc": {
+        "es": "VANDYXX — dúo de DJs. Música electrónica, shows en vivo y lanzamientos. Bookings en todo el mundo.",
+        "en": "VANDYXX — DJ duo. Electronic music, live shows, and releases. Bookings worldwide."
+      }
+    },
+    "marquee": {
+      "text": {
+        "es": "VANDYXX ✦ PRÓXIMAMENTE ✦ BOOKINGS EN TODO EL MUNDO ✦ MADRID · ESPAÑA ✦ ",
+        "en": "VANDYXX ✦ COMING SOON ✦ WORLDWIDE BOOKINGS ✦ MADRID · SPAIN ✦ "
+      }
+    },
+    "nav": {
+      "home": { "es": "Inicio", "en": "Home" },
+      "about": { "es": "Nosotras", "en": "About" },
+      "music": { "es": "Música", "en": "Music" },
+      "reels": { "es": "Reels", "en": "Reels" },
+      "tour": { "es": "Gira", "en": "Tour" },
+      "gallery": { "es": "Galería", "en": "Gallery" },
+      "booking": { "es": "Contrataciones", "en": "Booking" }
+    },
+    "hero": {
+      "eyebrow": { "es": "DÚO DE DJs · EN VIVO · ELECTRÓNICA", "en": "DJ DUO · LIVE · ELECTRONIC" },
+      "sub": { "es": "Dos artistas. Una frecuencia. Sonido que mueve la pista.", "en": "Two artists. One frequency. Sound that moves the floor." },
+      "listen": { "es": "Escuchar", "en": "Listen Now" },
+      "book": { "es": "Contrátanos", "en": "Book Us" },
+      "scroll": { "es": "Desliza", "en": "Scroll" }
+    },
+    "about": {
+      "title": { "es": "Nosotras", "en": "About" },
+      "lead": {
+        "es": "VANDYXX es el dúo femenino de DJs formado por <b>Noelia Moya</b> y <b>Essie de Vall</b> — dos artistas open-format con base en Madrid que fusionan energía latina, urbana, house y electrónica en un único show hipnótico que enciende la pista.",
+        "en": "VANDYXX is the female DJ duo of <b>Noelia Moya</b> &amp; <b>Essie de Vall</b> — two open-format artists based in Madrid, bending Latin, urban, house and electronic energy into one hypnotic, dancefloor-shaking show."
+      },
+      "badge": { "es": "MADRID · ES", "en": "MADRID · ES" },
+      "stat1": { "es": "Seguidores", "en": "Followers" },
+      "stat2": { "es": "Shows", "en": "Shows" },
+      "stat3": { "es": "Ciudades", "en": "Cities" }
+    },
+    "member": {
+      "noelia": {
+        "role": { "es": "DJ · Open Format · Energía Latina", "en": "DJ · Open Format · Latin Energy" }
+      },
+      "essie": {
+        "role": { "es": "DJ · Open Format · Madrid", "en": "DJ · Open Format · Madrid" }
+      }
+    },
+    "music": {
+      "title": { "es": "Música", "en": "Music" },
+      "intro": { "es": "Escucha los últimos lanzamientos y DJ sets en todas las plataformas.", "en": "Stream the latest releases and DJ sets across all platforms." },
+      "hint": { "es": "Escucha sus sets y tracks completos en SoundCloud.", "en": "Listen to their full sets and tracks on SoundCloud." },
+      "playerNoelia": { "es": "Noelia Moya — SoundCloud", "en": "Noelia Moya — SoundCloud" },
+      "playerEssie": { "es": "Essie de Vall — SoundCloud", "en": "Essie de Vall — SoundCloud" }
+    },
+    "reels": {
+      "title": { "es": "Reels", "en": "Reels" },
+      "intro": { "es": "Mashups, detrás de cámaras y momentos en vivo — mira al dúo en acción.", "en": "Mashups, behind-the-scenes and live moments — watch the duo in action." },
+      "placeholder": { "es": "<b>Video destacado</b><br>Próximamente.", "en": "<b>Featured video</b><br>Coming soon." },
+      "note": { "es": "Videos completos en YouTube, Instagram y TikTok.", "en": "Full videos on YouTube, Instagram and TikTok." }
+    },
+    "tour": {
+      "title": { "es": "Fechas de Gira", "en": "Tour Dates" },
+      "tickets": { "es": "Entradas", "en": "Tickets" },
+      "soldout": { "es": "Agotado", "en": "Sold Out" },
+      "rsvp": { "es": "Reservar", "en": "RSVP" },
+      "note": { "es": "Sigue sus redes para nuevas fechas.", "en": "Follow us on social media for new dates." }
+    },
+    "gallery": {
+      "title": { "es": "Galería", "en": "Gallery" }
+    },
+    "booking": {
+      "title": { "es": "Contrataciones", "en": "Booking" },
+      "heading": { "es": "Lleva a VANDYXX a tu escenario.", "en": "Bring VANDYXX to your stage." },
+      "text": {
+        "es": "Disponibles en todo el mundo para festivales, clubes y eventos privados. Envíanos los detalles y nuestro equipo te responderá en 48 horas.",
+        "en": "Available worldwide for festivals, clubs and private events. Send us the details and our team will get back to you within 48 hours."
+      },
+      "email": { "es": "Correo", "en": "Email" },
+      "based": { "es": "Con base en", "en": "Based in" },
+      "mgmt": { "es": "Management", "en": "Management" }
+    },
+    "form": {
+      "name": { "es": "Tu nombre", "en": "Your name" },
+      "email": { "es": "Correo", "en": "Email" },
+      "event": { "es": "Evento / Lugar", "en": "Event / Venue" },
+      "date": { "es": "Fecha", "en": "Date" },
+      "message": { "es": "Mensaje", "en": "Message" },
+      "send": { "es": "Enviar Solicitud", "en": "Send Request" }
+    },
+    "footer": {
+      "news": { "es": "Únete al círculo — nuevos lanzamientos y shows secretos.", "en": "Join the inner circle — new drops & secret shows." },
+      "placeholder": { "es": "tu@correo.com", "en": "you@email.com" },
+      "join": { "es": "Unirme", "en": "Join" },
+      "rights": { "es": "Todos los derechos reservados.", "en": "All rights reserved." },
+      "credit": { "es": "Prototipo por MVP Cluster El Salvador", "en": "Prototype by MVP Cluster El Salvador" }
+    }
   }
 }

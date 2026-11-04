@@ -1,7 +1,8 @@
 # ============================================================
 #  VANDYXX — Configuración del panel de contenido (CMS)
 #  Compatible con Sveltia CMS y Decap CMS.
-#  Cambia SOLO la línea "repo:" por tu usuario/repositorio de GitHub.
+#  Cada campo corresponde a una ruta de content.json.
+#  No cambies los "name:": la web los busca por ese nombre.
 # ============================================================
 
 backend:
@@ -24,7 +25,7 @@ collections:
       - name: "principal"
         label: "Contenido principal"
         file: "content.json"
-        description: "Edita textos, fotos, fechas y redes. Al guardar, la web se actualiza sola."
+        description: "Edita textos, fotos, enlaces, fechas y redes. Al guardar, la web se actualiza sola."
         fields:
           # ----- Video destacado -----
           - label: "Video destacado (link de YouTube)"
@@ -43,6 +44,16 @@ collections:
               - { label: "Foto de Noelia (opcional)", name: "noelia", widget: "image", required: false }
               - { label: "Foto de Essie (opcional)", name: "essie", widget: "image", required: false }
 
+          # ----- Galería -----
+          - label: "Galería (6 fotos)"
+            name: "gallery"
+            widget: "list"
+            min: 6
+            max: 6
+            label_singular: "Foto"
+            fields:
+              - { label: "Foto", name: "image", widget: "image", required: false }
+
           # ----- Estadísticas -----
           - label: "Estadísticas (contadores)"
             name: "stats"
@@ -53,8 +64,8 @@ collections:
               - { label: "Shows", name: "shows", widget: "string" }
               - { label: "Ciudades", name: "cities", widget: "string" }
 
-          # ----- Bios -----
-          - label: "Integrantes — Noelia"
+          # ----- Integrantes -----
+          - label: "Integrantes"
             name: "members"
             widget: "object"
             fields:
@@ -62,14 +73,75 @@ collections:
                 name: "noelia"
                 widget: "object"
                 fields:
+                  - { label: "Nombre", name: "name", widget: "string" }
+                  - { label: "Iniciales (si no hay foto)", name: "initials", widget: "string" }
                   - { label: "Bio (Español)", name: "bio_es", widget: "text" }
                   - { label: "Bio (English)", name: "bio_en", widget: "text" }
+                  - { label: "Link de Instagram", name: "instagram", widget: "string" }
+                  - { label: "Link de SoundCloud (también es el reproductor)", name: "soundcloud", widget: "string" }
+                  - { label: "Link de TikTok", name: "tiktok", widget: "string" }
               - label: "Essie"
                 name: "essie"
                 widget: "object"
                 fields:
+                  - { label: "Nombre", name: "name", widget: "string" }
+                  - { label: "Iniciales (si no hay foto)", name: "initials", widget: "string" }
                   - { label: "Bio (Español)", name: "bio_es", widget: "text" }
                   - { label: "Bio (English)", name: "bio_en", widget: "text" }
+                  - { label: "Link de Instagram", name: "instagram", widget: "string" }
+                  - { label: "Link de SoundCloud (también es el reproductor)", name: "soundcloud", widget: "string" }
+                  - { label: "Link de Mixcloud", name: "mixcloud", widget: "string" }
+                  - { label: "Sitio web", name: "website", widget: "string" }
+
+          # ----- Lanzamientos -----
+          - label: "Lanzamientos (3)"
+            name: "releases"
+            widget: "list"
+            min: 3
+            max: 3
+            label_singular: "Lanzamiento"
+            summary: "{{fields.name}} ({{fields.type}})"
+            fields:
+              - { label: "Tipo (EP, SINGLE, REMIX…)", name: "type", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Año", name: "date", widget: "string" }
+              - { label: "Portada", name: "art", widget: "image", required: false }
+              - label: "Enlaces de escucha (3)"
+                name: "links"
+                widget: "list"
+                min: 3
+                max: 3
+                label_singular: "Enlace"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Nombre (Spotify, Apple, Beatport…)", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+          # ----- Reels / videos -----
+          - label: "Reels / videos (4)"
+            name: "reels"
+            widget: "list"
+            min: 4
+            max: 4
+            label_singular: "Video"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Plataforma (YouTube, Instagram, TikTok)", name: "platform", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Vistas (ej: 2.1K)", name: "views", widget: "string" }
+              - { label: "Link del video", name: "url", widget: "string" }
+              - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+
+          # ----- Contacto y booking -----
+          - label: "Contacto y booking"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - { label: "Correo", name: "email", widget: "string" }
+              - { label: "Con base en (texto)", name: "based", widget: "string" }
+              - { label: "Con base en (link)", name: "basedUrl", widget: "string", required: false, hint: "Déjalo en # si no hay link." }
+              - { label: "Management (texto)", name: "management", widget: "string" }
+              - { label: "Management (link)", name: "managementUrl", widget: "string", required: false, hint: "Déjalo en # si no hay link." }
 
           # ----- Instagram auto-feed -----
           - label: "Galería desde Instagram (auto-feed)"
@@ -100,8 +172,8 @@ collections:
                   - { label: "Estado", name: "status", widget: "select", options: ["tickets", "soldout"], default: "tickets" }
                   - { label: "Link de entradas", name: "url", widget: "string", required: false, default: "#" }
 
-          # ----- Redes sociales -----
-          - label: "Redes sociales (links)"
+          # ----- Redes sociales (pie de página) -----
+          - label: "Redes sociales (pie de página)"
             name: "socials"
             widget: "object"
             fields:
@@ -110,3 +182,129 @@ collections:
               - { label: "TikTok", name: "tiktok", widget: "string" }
               - { label: "SoundCloud", name: "soundcloud", widget: "string" }
               - { label: "Mixcloud", name: "mixcloud", widget: "string" }
+
+          # ----- Textos de la web (bilingües) -----
+          - label: "Textos de la web (Español / English)"
+            name: "texts"
+            widget: "object"
+            hint: "Cada texto tiene versión en español y en inglés. Si una queda vacía, la web usa el texto anterior."
+            fields:
+              - label: "Sitio (pestaña del navegador)"
+                name: "site"
+                widget: "object"
+                fields:
+                  - { label: "Título de la pestaña", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Descripción para buscadores"
+                name: "meta"
+                widget: "object"
+                fields:
+                  - { label: "Descripción", name: "desc", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+              - label: "Banda de texto (marquee)"
+                name: "marquee"
+                widget: "object"
+                fields:
+                  - { label: "Texto", name: "text", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Menú"
+                name: "nav"
+                widget: "object"
+                fields:
+                  - { label: "Inicio", name: "home", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Nosotras / About", name: "about", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Música", name: "music", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Reels", name: "reels", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Gira", name: "tour", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Galería", name: "gallery", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Contrataciones", name: "booking", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Portada (hero)"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Frase superior (eyebrow)", name: "eyebrow", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Subtítulo", name: "sub", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Botón 1 (escuchar)", name: "listen", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Botón 2 (contratar)", name: "book", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Texto de desplazar", name: "scroll", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Sección Nosotras"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Presentación (puede llevar <b>negritas</b>)", name: "lead", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Etiqueta sobre la foto", name: "badge", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Estadística 1 (seguidores)", name: "stat1", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Estadística 2 (shows)", name: "stat2", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Estadística 3 (ciudades)", name: "stat3", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Roles de integrantes"
+                name: "member"
+                widget: "object"
+                fields:
+                  - label: "Noelia"
+                    name: "noelia"
+                    widget: "object"
+                    fields:
+                      - { label: "Rol", name: "role", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - label: "Essie"
+                    name: "essie"
+                    widget: "object"
+                    fields:
+                      - { label: "Rol", name: "role", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Música"
+                name: "music"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Introducción", name: "intro", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Nota bajo los reproductores", name: "hint", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Título reproductor de Noelia", name: "playerNoelia", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Título reproductor de Essie", name: "playerEssie", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Reels"
+                name: "reels"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Introducción", name: "intro", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Texto si no hay video destacado (puede llevar <b>)", name: "placeholder", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Nota final", name: "note", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+              - label: "Gira"
+                name: "tour"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Etiqueta: entradas", name: "tickets", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Etiqueta: agotado", name: "soldout", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Botón: reservar", name: "rsvp", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Nota bajo las fechas", name: "note", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+              - label: "Galería"
+                name: "gallery"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Contrataciones"
+                name: "booking"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Frase principal", name: "heading", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Texto", name: "text", widget: "object", fields: [{ label: "Español", name: "es", widget: "text" }, { label: "English", name: "en", widget: "text" }] }
+                  - { label: "Etiqueta: correo", name: "email", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Etiqueta: con base en", name: "based", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Etiqueta: management", name: "mgmt", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Formulario de contrataciones"
+                name: "form"
+                widget: "object"
+                fields:
+                  - { label: "Campo: nombre", name: "name", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Campo: correo", name: "email", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Campo: evento / lugar", name: "event", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Campo: fecha", name: "date", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Campo: mensaje", name: "message", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Botón: enviar", name: "send", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+              - label: "Pie de página"
+                name: "footer"
+                widget: "object"
+                fields:
+                  - { label: "Texto del boletín", name: "news", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Ejemplo del campo de correo", name: "placeholder", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Botón: unirme", name: "join", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Derechos reservados", name: "rights", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }
+                  - { label: "Crédito", name: "credit", widget: "object", fields: [{ label: "Español", name: "es", widget: "string" }, { label: "English", name: "en", widget: "string" }] }

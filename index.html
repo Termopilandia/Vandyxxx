@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VANDYXX — Official Site</title>
+  <title data-i18n="site.title">VANDYXX — Official Site</title>
   <meta name="description" content="VANDYXX — DJ duo. Electronic music, live shows, and releases. Bookings worldwide." data-i18n="meta.desc" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="VANDYXX — Official Site" />
-  <meta property="og:description" content="DJ duo. Electronic music, live shows, and releases." />
+  <meta property="og:title" content="VANDYXX — Official Site" data-i18n="site.title" />
+  <meta property="og:description" content="DJ duo. Electronic music, live shows, and releases." data-i18n="meta.desc" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/og-image.jpg" />
 
@@ -553,8 +553,8 @@ img{max-width:100%;display:block}
   <!-- ===== MARQUEE ===== -->
   <div class="marquee">
     <div class="marquee__track">
-      <span>VANDYXX ✦ COMING SOON ✦ WORLDWIDE BOOKINGS ✦ MADRID · SPAIN ✦ </span>
-      <span>VANDYXX ✦ COMING SOON ✦ WORLDWIDE BOOKINGS ✦ MADRID · SPAIN ✦ </span>
+      <span data-i18n="marquee.text">VANDYXX ✦ COMING SOON ✦ WORLDWIDE BOOKINGS ✦ MADRID · SPAIN ✦ </span>
+      <span data-i18n="marquee.text">VANDYXX ✦ COMING SOON ✦ WORLDWIDE BOOKINGS ✦ MADRID · SPAIN ✦ </span>
     </div>
   </div>
 
@@ -566,8 +566,8 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="about__grid">
-      <div class="about__feature reveal" data-img="assets/images/duo-1.jpg">
-        <span class="about__badge">MADRID · ES</span>
+      <div class="about__feature reveal" data-img="assets/images/duo-1.jpg" data-content-img="images.feature">
+        <span class="about__badge" data-i18n="about.badge">MADRID · ES</span>
       </div>
 
       <div class="about__intro reveal">
@@ -587,9 +587,9 @@ img{max-width:100%;display:block}
     <div class="members">
       <!-- Member 1 -->
       <article class="member reveal">
-        <div class="member__avatar member__avatar--1" data-img="assets/images/noelia.jpg">NM</div>
+        <div class="member__avatar member__avatar--1" data-img="assets/images/noelia.jpg" data-content-img="images.noelia" data-text="members.noelia.initials">NM</div>
         <div class="member__body">
-          <h3 class="member__name">Noelia Moya</h3>
+          <h3 class="member__name" data-text="members.noelia.name">Noelia Moya</h3>
           <p class="member__role" data-i18n="member.noelia.role">DJ · Open Format · Latin Energy</p>
           <p class="member__bio" data-i18n="member.noelia.bio">
             A magnetic performer with a community of millions across social platforms,
@@ -597,18 +597,18 @@ img{max-width:100%;display:block}
             house flavors — the kind of party that doesn't stop once the beat drops.
           </p>
           <div class="member__socials">
-            <a href="https://www.instagram.com/noeliamoyass/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://soundcloud.com/noelia-moya-791503805" target="_blank" rel="noopener">SoundCloud</a>
-            <a href="https://www.tiktok.com/@noeliamoyas" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.instagram.com/noeliamoyass/" target="_blank" rel="noopener" data-link="members.noelia.instagram">Instagram</a>
+            <a href="https://soundcloud.com/noelia-moya-791503805" target="_blank" rel="noopener" data-link="members.noelia.soundcloud">SoundCloud</a>
+            <a href="https://www.tiktok.com/@noeliamoyas" target="_blank" rel="noopener" data-link="members.noelia.tiktok">TikTok</a>
           </div>
         </div>
       </article>
 
       <!-- Member 2 -->
       <article class="member reveal">
-        <div class="member__avatar member__avatar--2" data-img="assets/images/essie.jpg">EV</div>
+        <div class="member__avatar member__avatar--2" data-img="assets/images/essie.jpg" data-content-img="images.essie" data-text="members.essie.initials">EV</div>
         <div class="member__body">
-          <h3 class="member__name">Essie de Vall</h3>
+          <h3 class="member__name" data-text="members.essie.name">Essie de Vall</h3>
           <p class="member__role" data-i18n="member.essie.role">DJ · Open Format · Madrid</p>
           <p class="member__bio" data-i18n="member.essie.bio">
             From Los Angeles to Madrid, Essie is an open-format DJ and resident at clubs
@@ -617,10 +617,10 @@ img{max-width:100%;display:block}
             Pride before 30,000+ people.
           </p>
           <div class="member__socials">
-            <a href="https://www.instagram.com/essiedevall/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://soundcloud.com/essie-de-vall" target="_blank" rel="noopener">SoundCloud</a>
-            <a href="https://www.mixcloud.com/essie-de-vall/" target="_blank" rel="noopener">Mixcloud</a>
-            <a href="https://www.essiedevall.com/" target="_blank" rel="noopener">Website</a>
+            <a href="https://www.instagram.com/essiedevall/" target="_blank" rel="noopener" data-link="members.essie.instagram">Instagram</a>
+            <a href="https://soundcloud.com/essie-de-vall" target="_blank" rel="noopener" data-link="members.essie.soundcloud">SoundCloud</a>
+            <a href="https://www.mixcloud.com/essie-de-vall/" target="_blank" rel="noopener" data-link="members.essie.mixcloud">Mixcloud</a>
+            <a href="https://www.essiedevall.com/" target="_blank" rel="noopener" data-link="members.essie.website">Website</a>
           </div>
         </div>
       </article>
@@ -640,43 +640,43 @@ img{max-width:100%;display:block}
 
     <div class="releases">
       <article class="release reveal">
-        <div class="release__art" data-img="assets/images/release-1.jpg"></div>
+        <div class="release__art" data-img="assets/images/release-1.jpg" data-content-img="releases.0.art"></div>
         <div class="release__info">
-          <span class="release__type">EP</span>
-          <h3 class="release__name">NEON PULSE</h3>
-          <p class="release__date">2026</p>
+          <span class="release__type" data-text="releases.0.type">EP</span>
+          <h3 class="release__name" data-text="releases.0.name">NEON PULSE</h3>
+          <p class="release__date" data-text="releases.0.date">2026</p>
           <div class="release__links">
-            <a href="#" aria-label="Spotify">Spotify</a>
-            <a href="#" aria-label="Apple Music">Apple</a>
-            <a href="#" aria-label="Beatport">Beatport</a>
+            <a href="#" aria-label="Spotify" data-link="releases.0.links.0.url" data-text="releases.0.links.0.label">Spotify</a>
+            <a href="#" aria-label="Apple Music" data-link="releases.0.links.1.url" data-text="releases.0.links.1.label">Apple</a>
+            <a href="#" aria-label="Beatport" data-link="releases.0.links.2.url" data-text="releases.0.links.2.label">Beatport</a>
           </div>
         </div>
       </article>
 
       <article class="release reveal">
-        <div class="release__art" data-img="assets/images/release-2.jpg"></div>
+        <div class="release__art" data-img="assets/images/release-2.jpg" data-content-img="releases.1.art"></div>
         <div class="release__info">
-          <span class="release__type">SINGLE</span>
-          <h3 class="release__name">MIDNIGHT FREQ</h3>
-          <p class="release__date">2025</p>
+          <span class="release__type" data-text="releases.1.type">SINGLE</span>
+          <h3 class="release__name" data-text="releases.1.name">MIDNIGHT FREQ</h3>
+          <p class="release__date" data-text="releases.1.date">2025</p>
           <div class="release__links">
-            <a href="#" aria-label="Spotify">Spotify</a>
-            <a href="#" aria-label="Apple Music">Apple</a>
-            <a href="#" aria-label="Beatport">Beatport</a>
+            <a href="#" aria-label="Spotify" data-link="releases.1.links.0.url" data-text="releases.1.links.0.label">Spotify</a>
+            <a href="#" aria-label="Apple Music" data-link="releases.1.links.1.url" data-text="releases.1.links.1.label">Apple</a>
+            <a href="#" aria-label="Beatport" data-link="releases.1.links.2.url" data-text="releases.1.links.2.label">Beatport</a>
           </div>
         </div>
       </article>
 
       <article class="release reveal">
-        <div class="release__art" data-img="assets/images/release-3.jpg"></div>
+        <div class="release__art" data-img="assets/images/release-3.jpg" data-content-img="releases.2.art"></div>
         <div class="release__info">
-          <span class="release__type">REMIX</span>
-          <h3 class="release__name">AFTERGLOW</h3>
-          <p class="release__date">2025</p>
+          <span class="release__type" data-text="releases.2.type">REMIX</span>
+          <h3 class="release__name" data-text="releases.2.name">AFTERGLOW</h3>
+          <p class="release__date" data-text="releases.2.date">2025</p>
           <div class="release__links">
-            <a href="#" aria-label="Spotify">Spotify</a>
-            <a href="#" aria-label="Apple Music">Apple</a>
-            <a href="#" aria-label="YouTube">YouTube</a>
+            <a href="#" aria-label="Spotify" data-link="releases.2.links.0.url" data-text="releases.2.links.0.label">Spotify</a>
+            <a href="#" aria-label="Apple Music" data-link="releases.2.links.1.url" data-text="releases.2.links.1.label">Apple</a>
+            <a href="#" aria-label="YouTube" data-link="releases.2.links.2.url" data-text="releases.2.links.2.label">YouTube</a>
           </div>
         </div>
       </article>
@@ -685,19 +685,19 @@ img{max-width:100%;display:block}
     <!-- Live SoundCloud players (real profiles) -->
     <div class="players">
       <div class="music__player reveal">
-        <h3 class="music__player-title">Noelia Moya — SoundCloud</h3>
+        <h3 class="music__player-title" data-i18n="music.playerNoelia">Noelia Moya — SoundCloud</h3>
         <div class="music__embed">
           <iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" loading="lazy"
-            title="Noelia Moya SoundCloud"
+            title="Noelia Moya SoundCloud" data-sc="members.noelia.soundcloud" data-color="%23ff2d9b"
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/noelia-moya-791503805&color=%23ff2d9b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true"></iframe>
         </div>
       </div>
 
       <div class="music__player reveal">
-        <h3 class="music__player-title">Essie de Vall — SoundCloud</h3>
+        <h3 class="music__player-title" data-i18n="music.playerEssie">Essie de Vall — SoundCloud</h3>
         <div class="music__embed">
           <iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" loading="lazy"
-            title="Essie de Vall SoundCloud"
+            title="Essie de Vall SoundCloud" data-sc="members.essie.soundcloud" data-color="%2318e0ff"
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/essie-de-vall&color=%2318e0ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true"></iframe>
         </div>
       </div>
@@ -726,43 +726,43 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="reels__grid">
-      <a class="reel reveal" href="https://www.youtube.com/@TheVandyxx/shorts" target="_blank" rel="noopener">
-        <div class="reel__thumb" data-img="assets/images/duo-2.jpg" style="background-position:50% 30%"></div>
+      <a class="reel reveal" href="https://www.youtube.com/@TheVandyxx/shorts" target="_blank" rel="noopener" data-link="reels.0.url">
+        <div class="reel__thumb" data-img="assets/images/duo-2.jpg" data-content-img="reels.0.image" style="background-position:50% 30%"></div>
         <div class="reel__play"></div>
         <div class="reel__meta">
-          <span class="reel__plat">YouTube</span>
-          <h3 class="reel__title">Crazy Mashups</h3>
-          <span class="reel__views">▶ 2.1K</span>
+          <span class="reel__plat" data-text="reels.0.platform">YouTube</span>
+          <h3 class="reel__title" data-text="reels.0.title">Crazy Mashups</h3>
+          <span class="reel__views">▶ <span data-text="reels.0.views">2.1K</span></span>
         </div>
       </a>
 
-      <a class="reel reveal" href="https://www.instagram.com/thevandyxx/reels/" target="_blank" rel="noopener">
-        <div class="reel__thumb" data-img="assets/images/duo-1.jpg" style="background-position:50% 20%"></div>
+      <a class="reel reveal" href="https://www.instagram.com/thevandyxx/reels/" target="_blank" rel="noopener" data-link="reels.1.url">
+        <div class="reel__thumb" data-img="assets/images/duo-1.jpg" data-content-img="reels.1.image" style="background-position:50% 20%"></div>
         <div class="reel__play"></div>
         <div class="reel__meta">
-          <span class="reel__plat">Instagram</span>
-          <h3 class="reel__title">Studio Vibes</h3>
-          <span class="reel__views">▶ 107K</span>
+          <span class="reel__plat" data-text="reels.1.platform">Instagram</span>
+          <h3 class="reel__title" data-text="reels.1.title">Studio Vibes</h3>
+          <span class="reel__views">▶ <span data-text="reels.1.views">107K</span></span>
         </div>
       </a>
 
-      <a class="reel reveal" href="https://www.tiktok.com/@the.vandyxx" target="_blank" rel="noopener">
-        <div class="reel__thumb" data-img="assets/images/duo-2.jpg" style="background-position:50% 70%"></div>
+      <a class="reel reveal" href="https://www.tiktok.com/@the.vandyxx" target="_blank" rel="noopener" data-link="reels.2.url">
+        <div class="reel__thumb" data-img="assets/images/duo-2.jpg" data-content-img="reels.2.image" style="background-position:50% 70%"></div>
         <div class="reel__play"></div>
         <div class="reel__meta">
-          <span class="reel__plat">TikTok</span>
-          <h3 class="reel__title">Señorita… ¿Hola?</h3>
-          <span class="reel__views">▶ 28K</span>
+          <span class="reel__plat" data-text="reels.2.platform">TikTok</span>
+          <h3 class="reel__title" data-text="reels.2.title">Señorita… ¿Hola?</h3>
+          <span class="reel__views">▶ <span data-text="reels.2.views">28K</span></span>
         </div>
       </a>
 
-      <a class="reel reveal" href="https://www.youtube.com/@TheVandyxx" target="_blank" rel="noopener">
-        <div class="reel__thumb" data-img="assets/images/duo-1.jpg" style="background-position:50% 55%"></div>
+      <a class="reel reveal" href="https://www.youtube.com/@TheVandyxx" target="_blank" rel="noopener" data-link="reels.3.url">
+        <div class="reel__thumb" data-img="assets/images/duo-1.jpg" data-content-img="reels.3.image" style="background-position:50% 55%"></div>
         <div class="reel__play"></div>
         <div class="reel__meta">
-          <span class="reel__plat">YouTube</span>
-          <h3 class="reel__title">Live Session</h3>
-          <span class="reel__views">▶ 19K</span>
+          <span class="reel__plat" data-text="reels.3.platform">YouTube</span>
+          <h3 class="reel__title" data-text="reels.3.title">Live Session</h3>
+          <span class="reel__views">▶ <span data-text="reels.3.views">19K</span></span>
         </div>
       </a>
     </div>
@@ -834,12 +834,12 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="gallery__grid">
-      <figure class="gallery__item gallery__item--tall reveal" data-img="assets/images/duo-1.jpg" style="background-position:50% 22%"></figure>
-      <figure class="gallery__item reveal" data-img="assets/images/duo-2.jpg" style="background-position:50% 30%"></figure>
-      <figure class="gallery__item reveal" data-img="assets/images/duo-1.jpg" style="background-position:50% 70%"></figure>
-      <figure class="gallery__item gallery__item--wide reveal" data-img="assets/images/duo-2.jpg" style="background-position:50% 45%"></figure>
-      <figure class="gallery__item reveal" data-img="assets/images/duo-2.jpg" style="background-position:50% 75%"></figure>
-      <figure class="gallery__item gallery__item--tall reveal" data-img="assets/images/duo-1.jpg" style="background-position:50% 45%"></figure>
+      <figure class="gallery__item gallery__item--tall reveal" data-img="assets/images/duo-1.jpg" data-content-img="gallery.0.image" style="background-position:50% 22%"></figure>
+      <figure class="gallery__item reveal" data-img="assets/images/duo-2.jpg" data-content-img="gallery.1.image" style="background-position:50% 30%"></figure>
+      <figure class="gallery__item reveal" data-img="assets/images/duo-1.jpg" data-content-img="gallery.2.image" style="background-position:50% 70%"></figure>
+      <figure class="gallery__item gallery__item--wide reveal" data-img="assets/images/duo-2.jpg" data-content-img="gallery.3.image" style="background-position:50% 45%"></figure>
+      <figure class="gallery__item reveal" data-img="assets/images/duo-2.jpg" data-content-img="gallery.4.image" style="background-position:50% 75%"></figure>
+      <figure class="gallery__item gallery__item--tall reveal" data-img="assets/images/duo-1.jpg" data-content-img="gallery.5.image" style="background-position:50% 45%"></figure>
     </div>
   </section>
 
@@ -858,9 +858,9 @@ img{max-width:100%;display:block}
           and our team will get back to you within 48 hours.
         </p>
         <ul class="booking__contacts">
-          <li><span data-i18n="booking.email">Email</span><a href="mailto:thevandyxx@gmail.com">thevandyxx@gmail.com</a></li>
-          <li><span data-i18n="booking.based">Based in</span><a href="#">Madrid, Spain · Worldwide</a></li>
-          <li><span data-i18n="booking.mgmt">Management</span><a href="#">MVP Cluster El Salvador</a></li>
+          <li><span data-i18n="booking.email">Email</span><a href="mailto:thevandyxx@gmail.com" data-link="contacts.email" data-link-prefix="mailto:" data-text="contacts.email">thevandyxx@gmail.com</a></li>
+          <li><span data-i18n="booking.based">Based in</span><a href="#" data-link="contacts.basedUrl" data-text="contacts.based">Madrid, Spain · Worldwide</a></li>
+          <li><span data-i18n="booking.mgmt">Management</span><a href="#" data-link="contacts.managementUrl" data-text="contacts.management">MVP Cluster El Salvador</a></li>
         </ul>
       </div>
 
@@ -930,13 +930,17 @@ img{max-width:100%;display:block}
 const I18N = {
   en: {
     "meta.desc": "VANDYXX — DJ duo. Electronic music, live shows, and releases. Bookings worldwide.",
+    "site.title": "VANDYXX — Official Site",
+    "marquee.text": "VANDYXX ✦ COMING SOON ✦ WORLDWIDE BOOKINGS ✦ MADRID · SPAIN ✦ ",
+    "about.badge": "MADRID · ES",
+    "music.playerNoelia": "Noelia Moya — SoundCloud", "music.playerEssie": "Essie de Vall — SoundCloud",
     "nav.home": "Home", "nav.about": "About", "nav.music": "Music", "nav.reels": "Reels",
     "nav.tour": "Tour", "nav.gallery": "Gallery", "nav.booking": "Booking",
 
     "reels.title": "Reels",
     "reels.intro": "Mashups, behind-the-scenes and live moments — watch the duo in action.",
-    "reels.placeholder": "<b>Featured video</b><br>Paste a YouTube link in the <code>FEATURED_VIDEO</code> line (in this file's script) to embed it here.",
-    "reels.note": "Tip: paste a YouTube/Instagram/TikTok video URL to embed the real clip inline.",
+    "reels.placeholder": "<b>Featured video</b><br>Coming soon.",
+    "reels.note": "Full videos on YouTube, Instagram and TikTok.",
     "booking.based": "Based in",
 
     "hero.eyebrow": "DJ DUO · LIVE · ELECTRONIC",
@@ -954,11 +958,11 @@ const I18N = {
     "music.title": "Music",
     "music.intro": "Stream the latest releases and DJ sets across all platforms.",
     "music.latest": "Latest Set",
-    "music.hint": "Live SoundCloud profiles. Swap in a specific track or playlist URL anytime, or add Spotify/YouTube embeds.",
+    "music.hint": "Listen to their full sets and tracks on SoundCloud.",
 
     "tour.title": "Tour Dates",
     "tour.tickets": "Tickets", "tour.soldout": "Sold Out", "tour.rsvp": "RSVP",
-    "tour.note": "Connect a Bandsintown widget here to auto-update tour dates.",
+    "tour.note": "Follow us on social media for new dates.",
 
     "gallery.title": "Gallery",
 
@@ -977,13 +981,17 @@ const I18N = {
   },
   es: {
     "meta.desc": "VANDYXX — dúo de DJs. Música electrónica, shows en vivo y lanzamientos. Bookings en todo el mundo.",
+    "site.title": "VANDYXX — Sitio oficial",
+    "marquee.text": "VANDYXX ✦ PRÓXIMAMENTE ✦ BOOKINGS EN TODO EL MUNDO ✦ MADRID · ESPAÑA ✦ ",
+    "about.badge": "MADRID · ES",
+    "music.playerNoelia": "Noelia Moya — SoundCloud", "music.playerEssie": "Essie de Vall — SoundCloud",
     "nav.home": "Inicio", "nav.about": "Nosotras", "nav.music": "Música", "nav.reels": "Reels",
     "nav.tour": "Gira", "nav.gallery": "Galería", "nav.booking": "Contrataciones",
 
     "reels.title": "Reels",
     "reels.intro": "Mashups, detrás de cámaras y momentos en vivo — mira al dúo en acción.",
-    "reels.placeholder": "<b>Video destacado</b><br>Pega un link de YouTube en la línea <code>FEATURED_VIDEO</code> (en el script de este archivo) para incrustarlo aquí.",
-    "reels.note": "Tip: pega la URL de un video de YouTube/Instagram/TikTok para incrustar el clip real.",
+    "reels.placeholder": "<b>Video destacado</b><br>Próximamente.",
+    "reels.note": "Videos completos en YouTube, Instagram y TikTok.",
     "booking.based": "Con base en",
 
     "hero.eyebrow": "DÚO DE DJs · EN VIVO · ELECTRÓNICA",
@@ -1001,11 +1009,11 @@ const I18N = {
     "music.title": "Música",
     "music.intro": "Escucha los últimos lanzamientos y DJ sets en todas las plataformas.",
     "music.latest": "Último Set",
-    "music.hint": "Perfiles de SoundCloud en vivo. Cambia la URL por un track o playlist específico cuando quieras, o agrega embeds de Spotify/YouTube.",
+    "music.hint": "Escucha sus sets y tracks completos en SoundCloud.",
 
     "tour.title": "Fechas de Gira",
     "tour.tickets": "Entradas", "tour.soldout": "Agotado", "tour.rsvp": "Reservar",
-    "tour.note": "Conecta un widget de Bandsintown aquí para actualizar las fechas automáticamente.",
+    "tour.note": "Sigue sus redes para nuevas fechas.",
 
     "gallery.title": "Galería",
 
@@ -1080,12 +1088,11 @@ async function loadContentAndApply(){
   /* Video destacado */
   if(c.featuredVideo) FEATURED_VIDEO = c.featuredVideo;
 
-  /* Imágenes principales (override de data-img antes de que cargue) */
-  if(c.images){
-    if(c.images.feature){ const f=document.querySelector(".about__feature"); if(f) f.setAttribute("data-img", c.images.feature); }
-    if(c.images.noelia){ const n=document.querySelector(".member__avatar--1"); if(n) n.setAttribute("data-img", c.images.noelia); }
-    if(c.images.essie){ const e=document.querySelector(".member__avatar--2"); if(e) e.setAttribute("data-img", c.images.essie); }
-  }
+  /* Textos bilingües (content.texts) -> I18N, con la clave "sección.campo" */
+  if(c.texts) flattenTexts(c.texts, "");
+
+  /* Textos, enlaces, fotos y reproductores marcados en el HTML */
+  applyContentPaths(c);
 
   /* Bios -> se fusionan en I18N para que el cambio de idioma las use */
   if(c.members){
@@ -1151,6 +1158,47 @@ async function loadContentAndApply(){
       const s=document.createElement("script"); s.type="module"; s.src="https://w.behold.so/widget.js"; document.body.appendChild(s);
     }
   }
+}
+
+/* Lee una ruta tipo "releases.0.name" dentro de content.json */
+function getPath(obj, path){
+  return path.split(".").reduce((o,k)=> (o==null ? undefined : o[k]), obj);
+}
+
+/* Aplana content.texts en I18N: nav:{home:{es,en}} -> I18N.es["nav.home"] */
+function flattenTexts(obj, prefix){
+  Object.keys(obj).forEach(k=>{
+    const v = obj[k];
+    const key = prefix ? prefix + "." + k : k;
+    if(v && typeof v === "object" && ("es" in v || "en" in v)){
+      if(v.es) I18N.es[key] = v.es;
+      if(v.en) I18N.en[key] = v.en;
+    } else if(v && typeof v === "object"){
+      flattenTexts(v, key);
+    }
+  });
+}
+
+/* Llena los elementos marcados en el HTML con valores de content.json.
+   Si un valor está vacío, se queda el texto por defecto del HTML. */
+function applyContentPaths(c){
+  document.querySelectorAll("[data-text]").forEach(el=>{
+    const v = getPath(c, el.dataset.text);
+    if(v) el.textContent = v;
+  });
+  document.querySelectorAll("[data-link]").forEach(el=>{
+    const v = getPath(c, el.dataset.link);
+    if(v) el.setAttribute("href", (el.dataset.linkPrefix || "") + v);
+  });
+  document.querySelectorAll("[data-content-img]").forEach(el=>{
+    const v = getPath(c, el.dataset.contentImg);
+    if(v) el.setAttribute("data-img", v);
+  });
+  document.querySelectorAll("iframe[data-sc]").forEach(el=>{
+    const v = getPath(c, el.dataset.sc);
+    if(v) el.src = "https://w.soundcloud.com/player/?url=" + encodeURIComponent(v) +
+      "&color=" + el.dataset.color + "&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true";
+  });
 }
 
 function youTubeId(url){
