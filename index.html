@@ -69,7 +69,7 @@ img{max-width:100%;display:block}
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
   transition:opacity .6s var(--ease), visibility .6s;
 }
-.preloader.is-done{opacity:0;visibility:hidden}
+.preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}
 .preloader__logo{
   font-family:var(--display);font-size:clamp(2.5rem,8vw,5rem);letter-spacing:2px;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -476,6 +476,8 @@ img{max-width:100%;display:block}
   .tour__status,.tour__btn{grid-column:2}
   .tour__btn{justify-self:start}
   .footer__news{flex-direction:column;align-items:flex-start}
+  .footer__news-form{width:100%;max-width:none;min-width:0}
+  .footer__news-form input{min-width:0}
   .stats{gap:24px}
 }
 @media(max-width:520px){
@@ -1262,9 +1264,10 @@ document.addEventListener("DOMContentLoaded", async ()=>{
   heroProbe.src = heroSrc;
 
   /* ---------- Preloader ---------- */
-  window.addEventListener("load", ()=>{
-    setTimeout(()=>document.getElementById("preloader").classList.add("is-done"), 700);
-  });
+  /* Se oculta al cargar la página o a los 2.5 s como máximo, para que nunca tape la web si algo tarda */
+  const hidePreloader = ()=> document.getElementById("preloader").classList.add("is-done");
+  setTimeout(hidePreloader, 2500);
+  window.addEventListener("load", ()=> setTimeout(hidePreloader, 700));
 
   /* ---------- Nav scroll state ---------- */
   const nav = document.getElementById("nav");
