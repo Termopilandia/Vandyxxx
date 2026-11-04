@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: TU-USUARIO/vandyxx-web   # <-- CAMBIA esto por tu-usuario/tu-repo
+  repo: Termopilandia/Vandyxxx
   branch: main
 
 # Dónde se guardan las fotos que suban desde el panel
